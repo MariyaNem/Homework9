@@ -3,3 +3,22 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number <= 0)
+{
+    Console.Write($"Введено не натуральное число");
+}
+else
+{
+    Console.Write($"N = {number} -> ");
+    NaturalNumbers(number);
+}
+
+void NaturalNumbers(int num)
+{
+    if (num == 0) return;
+    Console.Write($"{num} ");
+    NaturalNumbers(num - 1);
+}
